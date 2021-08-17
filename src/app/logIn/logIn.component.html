@@ -1,0 +1,17 @@
+<div class="main"><div class="card">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h2>WELCOME!</h2>
+    <div class="container">
+      <label for="name">NAME</label>
+      <input id="name" formControlName="name" type="text">
+    </div>
+    <div class="container">
+      <label for="password">PASSWORD</label>
+      <input id="password"  formControlName="password" type="password">
+    </div>
+  <button type="submit">LOGIN</button>
+  <div class="sign" routerLink='signup'>signup</div>
+  
+  </form>
+  </div>
+  </div>
