@@ -1,7 +1,7 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup,Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationExtras,Router } from '@angular/router';
 
 
 
@@ -32,8 +32,11 @@ export class LogInComponent implements OnInit {
             {
                 if(this.loginForm.value.password == users[i].password)
                 {
+                     let user = { name:this.loginForm.value.name     };
+                    localStorage.setItem('LoggedIn',JSON.stringify(user));
                     console.log("login Success");
-                    this.router.navigate(['welcome']);
+                    const NavigationExtras :NavigationExtras ={state:this.loginForm.value};
+                    this.router.navigate(['welcome'],NavigationExtras);
                 }
                 else{
                     console.log("incorrect password");
