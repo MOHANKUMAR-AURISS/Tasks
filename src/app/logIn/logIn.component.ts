@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormControl,FormGroup,Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { AppComponent } from '../app.component';
 
 
 @Component({
@@ -13,10 +12,8 @@ import { AppComponent } from '../app.component';
 })
 export class LogInComponent implements OnInit {
     loginForm:any = FormGroup;
-    constructor(private formBuilder:FormBuilder,private appComponent:AppComponent ,private router:Router){}
+    constructor(private formBuilder:FormBuilder ,private router:Router){}
     ngOnInit(): void {
-        console.log(this.appComponent.users);
-
         this.loginForm = this.formBuilder.group({
             name:new FormControl('',Validators.required),
             password:new FormControl('',Validators.required)
@@ -26,13 +23,14 @@ export class LogInComponent implements OnInit {
 
     onSubmit(){
         console.log(this.loginForm.value);
-console.log(this.appComponent.users.length);
-
-        for(let i=0;i<this.appComponent.users.length;i++)
+      let temp:any=localStorage.getItem('Users');
+      console.log(temp);
+      let  users = JSON.parse(temp) ;
+        for(let i=0;i<users.length;i++)
         {
-            if(this.loginForm.value.name == this.appComponent.users[i].name)
+            if(this.loginForm.value.name == users[i].name)
             {
-                if(this.loginForm.value.password == this.appComponent.users[i].password)
+                if(this.loginForm.value.password == users[i].password)
                 {
                     console.log("login Success");
                     this.router.navigate(['welcome']);
