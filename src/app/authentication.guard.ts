@@ -13,8 +13,6 @@ export class AuthenticationGuard implements CanActivate {
    if(localStorage.getItem('Users'))
    {
     console.log('success');
-  
-
     return true;
    }  
    else{

@@ -8,13 +8,19 @@ import { SignUpComponent } from './signUp/signUp.component';
 import { routes } from './app-routing.module';
 import { LogInComponent } from './logIn/logIn.component';
 import { WelcomePageComponent } from './welcomePage/welcomePage.component';
+import { UserNameComponent } from './userName/userName.component';
+import { UserDetailComponent } from './userDetail/userDetails.component';
+import { AppService } from './app.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     LogInComponent,
-    WelcomePageComponent
+    WelcomePageComponent,
+    UserNameComponent,
+    UserDetailComponent,
+    
   ],
 
   imports: [
@@ -24,6 +30,7 @@ import { WelcomePageComponent } from './welcomePage/welcomePage.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
+   
 
 
   ],

@@ -1,17 +1,30 @@
-<div class="main"><div class="card">
+<div class="main">
+  <span class="username" routerLink='username'> UserName Component</span>
+  <div class="card">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <h2>WELCOME!</h2>
-    <div class="container">
+    <div class="group"><div class="container">
       <label for="name">NAME</label>
       <input id="name" formControlName="name" type="text">
     </div>
+    <p *ngIf="nameStatus;else elseBlock"></p>
+    <ng-template #elseBlock>
+    <span class="warning">  Name Is Required</span>
+    </ng-template>
+    <p  *ngIf="noUser == true" class="warning">No User Found</p>
+    </div>
+    <div class="group">
     <div class="container">
       <label for="password">PASSWORD</label>
       <input id="password"  formControlName="password" type="password">
     </div>
+    <p *ngIf="passStatus;else elseBlock1"></p>
+    <ng-template #elseBlock1>
+    <span class="warning">  Password Is Required</span>
+    </ng-template>
+    </div>
   <button type="submit">LOGIN</button>
   <div class="sign" routerLink='signup'>signup</div>
-  
   </form>
   </div>
   </div>
