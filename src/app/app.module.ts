@@ -13,6 +13,7 @@ import { UserDetailComponent } from './userDetail/userDetails.component';
 import { AppService } from './app.service';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { CheckBoxComponent } from './checkBox/checkBox.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,8 @@ import { ChildComponent } from './parent/child/child.component';
     UserNameComponent,
     UserDetailComponent,
     ParentComponent,
-    ChildComponent
-    
+    ChildComponent,
+    CheckBoxComponent
   ],
 
   imports: [

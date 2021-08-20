@@ -1,6 +1,7 @@
 // import { NgModule } from '@angular/core';
 import { Routes } from '@angular/router';
 import { AuthenticationGuard } from './authentication.guard';
+import { CheckBoxComponent } from './checkBox/checkBox.component';
 import { LogInComponent } from './logIn/logIn.component';
 import { ParentComponent } from './parent/parent.component';
 import { SignUpComponent } from './signUp/signUp.component';
@@ -40,6 +41,10 @@ export const routes: Routes = [
   {
     path:'parent',
     component:ParentComponent
+  },
+  {
+    path:'checkBox',
+    component:CheckBoxComponent
   }
 
 ];

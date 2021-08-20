@@ -1,7 +1,10 @@
 <div class="main">
   <div>
   <ul class="nav"><li> <p class="parent" routerLink='username'> UserName Component</p></li>
-    <li> <p class="parent" routerLink='parent'> Parent Component</p></li></ul>
+    <li> <p class="parent" routerLink='parent'> Parent Component</p></li>
+    <li> <p class="parent" routerLink='checkBox'> CheckBox Component</p></li>
+
+  </ul>
    </div>
   <div class="card">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -30,8 +33,6 @@
   <div class="sign" routerLink='signup'>signup</div>
   </form>
    <div>
- <ul class="nav"><li> <p class="parent" routerLink='username'> UserName Component</p></li>
- <li> <p class="parent" routerLink='parent'> Parent Component</p></li></ul>
-</div>
+ 
   </div>
   </div>
