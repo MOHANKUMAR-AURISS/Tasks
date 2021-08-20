@@ -25,16 +25,10 @@ export class CheckBoxComponent implements OnInit{
 
 
     if( this.checkForm.get('selectAll').value == true){
-        console.log("inside if");
         this.checkForm.patchValue({ employed:true, married:true, educated:true, nri:true});
-        
-      
     }
     else{
-        console.log("inside else");
         this.checkForm.patchValue({ employed:false, married:false, educated:false, nri:false});
-
-       
     }
       
 
