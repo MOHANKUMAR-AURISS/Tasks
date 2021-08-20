@@ -1,5 +1,8 @@
 <div class="main">
-  <span class="username" routerLink='username'> UserName Component</span>
+  <div>
+  <ul class="nav"><li> <p class="parent" routerLink='username'> UserName Component</p></li>
+    <li> <p class="parent" routerLink='parent'> Parent Component</p></li></ul>
+   </div>
   <div class="card">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <h2>WELCOME!</h2>
@@ -26,5 +29,9 @@
   <button type="submit">LOGIN</button>
   <div class="sign" routerLink='signup'>signup</div>
   </form>
+   <div>
+ <ul class="nav"><li> <p class="parent" routerLink='username'> UserName Component</p></li>
+ <li> <p class="parent" routerLink='parent'> Parent Component</p></li></ul>
+</div>
   </div>
   </div>

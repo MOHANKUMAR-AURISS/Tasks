@@ -24,8 +24,6 @@ export class WelcomePageComponent implements OnInit {
         this.user = JSON.parse(temp);
         this.user.name = CryptoJS.AES.decrypt(this.user.name.trim(),this.enpass.trim()).toString(CryptoJS.enc.Utf8);
         console.log(this.user.name );
-        
-    
     }
 
   }

@@ -70,15 +70,23 @@
      color: red;
      font-size: 15px;
  }
- .username{
-     position: absolute;
-     top: 10px;
-     left: 10px;
-     padding: 20px;
-     background-color: white;
-     border-radius: 15px;
-     transition: 0.2s;
+ 
+ .parent{
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    transition: 0.2s;
+
  }
- .username:hover{
+ .parent:hover{
      transform: scale(1.05);
+ }
+
+ .nav{
+     display: flex;
+     list-style: none;
+
+ }
+ .nav li{
+     padding: 10px;
  }

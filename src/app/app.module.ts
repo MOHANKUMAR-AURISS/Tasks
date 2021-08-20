@@ -11,6 +11,8 @@ import { WelcomePageComponent } from './welcomePage/welcomePage.component';
 import { UserNameComponent } from './userName/userName.component';
 import { UserDetailComponent } from './userDetail/userDetails.component';
 import { AppService } from './app.service';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './parent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { AppService } from './app.service';
     WelcomePageComponent,
     UserNameComponent,
     UserDetailComponent,
+    ParentComponent,
+    ChildComponent
     
   ],
 
