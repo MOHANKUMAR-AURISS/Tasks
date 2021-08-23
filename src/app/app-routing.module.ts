@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { SignUpComponent } from './signUp/signUp.component';
 import { UserDetailComponent } from './userDetail/userDetails.component';
 import { UserNameComponent } from './userName/userName.component';
+import { WelcomePageAuthComponent } from './welcomePage-auth/welcomePage-auth.component';
 import { WelcomePageComponent } from './welcomePage/welcomePage.component';
 
 
@@ -26,6 +27,10 @@ export const routes: Routes = [
     path:"welcome",
     canActivate:[AuthenticationGuard],
     component:WelcomePageComponent
+  },
+  {
+    path:"welcome-auth",
+    component:WelcomePageAuthComponent
   },
   {
 

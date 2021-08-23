@@ -38,7 +38,7 @@
  .group{
      margin-bottom: 15px;
  }
- button{
+ form button{
    border: none;
    background-color: rgb(97, 186, 238);
    padding: 10px 20px 10px 20px;
@@ -90,3 +90,22 @@
  .nav li{
      padding: 10px;
  }
+
+ .auth{
+     display: flex;
+     justify-content:space-between;
+     margin-top: 25px;
+ }
+ .auth button{
+    border: none;
+    background-color: rgb(97, 186, 238);
+    padding: 10px 20px 10px 20px;
+    border-radius: 7px;
+    color: white;
+    font-weight: 500; 
+    font-size: 15px;
+    letter-spacing: 2px;
+
+ }
+ 
+ 

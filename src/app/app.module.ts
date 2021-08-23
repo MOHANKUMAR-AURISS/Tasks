@@ -18,6 +18,13 @@ import { ChildComponent } from './parent/child/child.component';
 import { CheckBoxComponent } from './checkBox/checkBox.component';
 import { CrudComponent } from './crud/crud.component';
 import { UpdateComponent } from './crud/update/update.component';
+import { WelcomePageAuthComponent } from './welcomePage-auth/welcomePage-auth.component';
+
+
+
+// AUTHO MODULE
+import { AuthModule } from '@auth0/auth0-angular';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +38,9 @@ import { UpdateComponent } from './crud/update/update.component';
     ChildComponent,
     CheckBoxComponent,
     CrudComponent,
-    UpdateComponent
+    UpdateComponent,
+    WelcomePageAuthComponent
+
   ],
 
   imports: [
@@ -41,7 +50,12 @@ import { UpdateComponent } from './crud/update/update.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    AuthModule.forRoot({
+      domain: 'dev-23olbpw8.us.auth0.com',
+      clientId: 'zNlp7oVLcodeTzHtcdoRB6syfPKjfpZk'
+    }),
    
 
 

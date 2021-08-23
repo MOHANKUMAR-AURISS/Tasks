@@ -4,6 +4,8 @@ import { NavigationExtras,Router } from '@angular/router';
 import * as CryptoJS from 'crypto-js';  
 
 
+import { AuthService } from '@auth0/auth0-angular';
+
 
 @Component({
   selector: 'log-in',
@@ -16,8 +18,22 @@ export class LogInComponent implements OnInit {
     nameStatus:any = true;
     noUser:any = false;
     enpass = '12345';
-    constructor(private formBuilder:FormBuilder ,private router:Router){}
+    profileJson:any
+    constructor(public authService:AuthService ,private formBuilder:FormBuilder ,private router:Router){}
     ngOnInit(): void {
+        console.log( this.authService.isAuthenticated$ );
+        // console.log(this.authService.user$ );
+        // const {} = this.authService.error$;
+        // console.log(this.authService);
+        
+        this.authService.user$.subscribe(
+            (profile) =>  console.log(profile));
+                // this.profileJson = JSON.stringify(profile, null, 2))
+          
+
+          console.log(this.profileJson);
+          
+        
         this.loginForm = this.formBuilder.group({
             name:new FormControl('',Validators.required),
             password:new FormControl('',Validators.required)

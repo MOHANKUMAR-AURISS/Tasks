@@ -10,6 +10,10 @@
   <div class="card">
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <h2>WELCOME!</h2>
+    <ul *ngIf="authService.user$ | async as user">
+      <li>{{ user.name }}</li>
+      <li>{{ user.email }}</li>
+    </ul>
     <div class="group"><div class="container">
       <label for="name">NAME</label>
       <input id="name" formControlName="name" type="text">
@@ -35,5 +39,10 @@
   </form>
    <div>
  
+  </div>
+  <div class="auth">
+  <button *ngIf="(authService.isAuthenticated$ | async) === false" (click)="authService.loginWithRedirect()">LOGIN WITH AUTH0</button>
+  <button  style="background-color: red;" (click)="authService.logout({ returnTo: 'http://localhost:4200' })">LOGOUT</button>
+    <!-- <button style="background-color: red;" (click)="authService.logout({ returnTo: document.location.origin })">LOGOUT</button> -->
   </div>
   </div>
